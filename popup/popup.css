@@ -1122,20 +1122,36 @@ body {
    FOOTER
    ========================================= */
 
+/* =========================================
+   FOOTER
+   ========================================= */
+
 .footer {
   margin-top: auto;
 
-  padding-top: 10px;
+  padding-top: 11px;
 
   border-top:
     1px solid
-    rgba(255, 255, 255, 0.05);
+    rgba(255, 255, 255, 0.06);
 
   display: flex;
 
   align-items: center;
 
   justify-content: space-between;
+
+  gap: 10px;
+}
+
+.footer-left {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  min-width: 0;
 }
 
 .footer-brand {
@@ -1151,7 +1167,7 @@ body {
 }
 
 .footer-brand small {
-  margin-left: 4px;
+  margin-left: 5px;
 
   color: #4e5957;
 
@@ -1160,20 +1176,116 @@ body {
   font-weight: 500;
 }
 
-.footer-tagline {
+.creator {
   font-size: 8px;
 
   color: #596663;
 
-  letter-spacing: 0.2px;
+  white-space: nowrap;
 }
 
-.footer-tagline span {
+.creator a {
+  color: #8c9996;
+
+  text-decoration: none;
+
+  font-weight: 650;
+
+  transition: 0.15s ease;
+}
+
+.creator a:hover {
   color: var(--green);
 
-  margin-left: 3px;
+  text-shadow:
+    0 0 8px
+    rgba(0, 245, 160, 0.35);
 }
 
+
+/* FOOTER LINKS */
+
+.footer-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+.github-link {
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  color: #879390;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  transition: 0.15s ease;
+}
+
+.github-link svg {
+  width: 14px;
+  height: 14px;
+}
+
+.github-link:hover {
+  color: #ffffff;
+
+  border-color:
+    rgba(0, 245, 160, 0.35);
+
+  background:
+    rgba(0, 245, 160, 0.08);
+
+  transform:
+    translateY(-1px);
+}
+
+.repo-link {
+  padding: 6px 9px;
+
+  border-radius: 7px;
+
+  color: #899693;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  text-decoration: none;
+
+  font-size: 8px;
+
+  font-weight: 750;
+
+  transition: 0.15s ease;
+}
+
+.repo-link:hover {
+  color: var(--green);
+
+  border-color:
+    rgba(0, 245, 160, 0.35);
+
+  background:
+    rgba(0, 245, 160, 0.07);
+}
 
 /* =========================================
    DISABLED STATE
