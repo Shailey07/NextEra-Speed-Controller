@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "NextEra Speed Controller",
+  "version": "1.0.0",
+  "description": "Control video playback speed from 1x to 30x on supported websites.",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_title": "NextEra Speed Controller",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "commands": {
+    "increase-speed": {
+      "suggested_key": {
+        "default": "Alt+Up"
+      },
+      "description": "Increase video speed by 0.5x"
+    },
+    "decrease-speed": {
+      "suggested_key": {
+        "default": "Alt+Down"
+      },
+      "description": "Decrease video speed by 0.5x"
+    },
+    "reset-speed": {
+      "suggested_key": {
+        "default": "Alt+R"
+      },
+      "description": "Reset video speed to 1x"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

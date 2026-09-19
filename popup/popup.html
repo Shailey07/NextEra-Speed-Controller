@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>NextEra — Video Speed Control</title>
+
+  <link
+    rel="stylesheet"
+    href="popup.css"
+  >
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+
+      <div class="brand">
+
+        <div class="brand-icon">
+          <span class="speed-line line-1"></span>
+          <span class="speed-line line-2"></span>
+          <span class="speed-line line-3"></span>
+
+          <div class="play-icon"></div>
+        </div>
+
+        <div class="brand-text">
+
+          <h1>
+            Next<span>Era</span>
+          </h1>
+
+          <p>Video Speed Control</p>
+
+        </div>
+
+      </div>
+
+      <label class="switch">
+
+        <input
+          type="checkbox"
+          id="enabled"
+          checked
+        >
+
+        <span class="switch-slider"></span>
+
+      </label>
+
+    </header>
+
+
+    <!-- STATUS CARD -->
+    <section class="status-card">
+
+      <div class="status-icon">
+        ⚡
+      </div>
+
+      <div class="status-copy">
+
+        <strong>
+          Watching Faster
+        </strong>
+
+        <span>
+          for a Smarter You
+        </span>
+
+      </div>
+
+      <div class="status-state">
+
+        <span id="statusText">
+          Enabled
+        </span>
+
+        <span class="status-dot"></span>
+
+      </div>
+
+    </section>
+
+
+    <!-- SPEED DISPLAY -->
+    <section class="speed-display">
+
+      <div class="speed-ring">
+
+        <div class="speed-value">
+          <span id="currentSpeedValue">
+            1x
+          </span>
+
+          <small>
+            Playback Speed
+          </small>
+        </div>
+
+      </div>
+
+      <div class="mode-row">
+
+        <div
+          class="mode-badge"
+          id="turboBadge"
+        >
+          <span>⚡</span>
+          Turbo Mode
+        </div>
+
+        <div
+          class="audio-badge"
+          id="audioBadge"
+        >
+          <span>🔇</span>
+          Audio Muted
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINE CONTROL -->
+    <section class="fine-controls">
+
+      <button
+        id="decreaseBtn"
+        class="control-btn"
+      >
+        <span>−</span>
+        0.5x
+      </button>
+
+      <button
+        id="resetBtn"
+        class="control-btn"
+      >
+        Reset
+        <span>1x</span>
+      </button>
+
+      <button
+        id="increaseBtn"
+        class="control-btn"
+      >
+        <span>+</span>
+        0.5x
+      </button>
+
+    </section>
+
+
+    <!-- SPEED PRESETS -->
+    <section class="speed-section">
+
+      <div class="section-label">
+        SPEED PRESETS
+      </div>
+
+      <div class="speed-grid">
+
+        <button data-speed="1">
+          1x
+        </button>
+
+        <button data-speed="2">
+          2x
+        </button>
+
+        <button data-speed="3">
+          3x
+        </button>
+
+        <button data-speed="4">
+          4x
+        </button>
+
+        <button data-speed="5">
+          5x
+        </button>
+
+        <button data-speed="10">
+          10x
+        </button>
+
+        <button data-speed="15">
+          15x
+        </button>
+
+        <button data-speed="20">
+          20x
+        </button>
+
+        <button
+          data-speed="30"
+          class="turbo-btn"
+        >
+          <span>⚡</span>
+          30x MAX
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- SKIP -->
+    <button
+      id="skipBtn"
+      class="skip-btn"
+    >
+
+      <div class="skip-icon">
+        ▶▶
+      </div>
+
+      <div class="skip-content">
+
+        <strong>
+          Skip to End
+        </strong>
+
+        <span>
+          Jump to the end of the video
+        </span>
+
+      </div>
+
+      <div class="arrow">
+        ›
+      </div>
+
+    </button>
+
+
+    <!-- SHORTCUTS -->
+    <section class="shortcuts">
+
+      <div class="shortcut-title">
+
+        <span class="keyboard-icon">
+          ⌨
+        </span>
+
+        Keyboard Shortcuts
+
+      </div>
+
+      <div class="shortcut-list">
+
+        <div>
+          <kbd>Alt</kbd>
+          <span>+</span>
+          <kbd>↑</kbd>
+
+          <label>
+            +0.5x
+          </label>
+        </div>
+
+        <div>
+          <kbd>Alt</kbd>
+          <span>+</span>
+          <kbd>↓</kbd>
+
+          <label>
+            −0.5x
+          </label>
+        </div>
+
+        <div>
+          <kbd>Alt</kbd>
+          <span>+</span>
+          <kbd>R</kbd>
+
+          <label>
+            Reset 1x
+          </label>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- STATUS MESSAGE -->
+    <div
+      id="status"
+      class="status-message"
+    ></div>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+      <div class="footer-brand">
+        Next<span>Era</span>
+        <small>v1.0.0</small>
+      </div>
+
+      <div class="footer-tagline">
+        Speed Up Your World
+        <span>◆</span>
+      </div>
+
+    </footer>
+
+  </div>
+
+
+  <script src="popup.js"></script>
+
+</body>
+
+</html>
